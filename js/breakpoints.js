@@ -1,1 +1,0 @@
-window.__framer__breakpoints_data = [{"hash":"72rtr7","mediaQuery":"(min-width: 1440px)"},{"hash":"ohah3a","mediaQuery":"(min-width: 960px) and (max-width: 1439.98px)"},{"hash":"xz4tef","mediaQuery":"(min-width: 600px) and (max-width: 959.98px)"},{"hash":"yn6mtb","mediaQuery":"(max-width: 599.98px)"}];
