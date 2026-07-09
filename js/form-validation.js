@@ -198,7 +198,12 @@
 
       var fd = new FormData(form);
 
-      fetch('send-form.php', {
+      // --- Web3Forms: встав свій Access Key нижче ---
+      fd.append('access_key', '84a18b7a-ce99-4f01-b981-894062266531');
+      fd.append('subject', 'Нова заявка з сайту SSG Tech');
+      fd.append('from_name', 'SSG Tech Website');
+
+      fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: fd
       })
@@ -236,7 +241,7 @@
                 if (f) setFieldState(f, true);
               });
             }
-            showToast(data.errors && data.errors._form ? data.errors._form : 'Помилка відправки. Спробуйте пізніше.');
+            showToast((data.errors && data.errors._form) || data.message || 'Помилка відправки. Спробуйте пізніше.');
             submitting = false;
           }
         })
